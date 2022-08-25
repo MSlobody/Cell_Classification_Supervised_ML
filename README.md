@@ -16,6 +16,8 @@
 4. From the Logistic Regression classifier, model coefficients and SHAPLY values were acquired to obtain the most important genes/features for classifying each cell type
 
   
+  
+  
    ![alt text](https://github.com/MSlobody/Cell_Classification_Supervised_ML/blob/main/Data/project_overview.PNG)
    
 ## Resources
