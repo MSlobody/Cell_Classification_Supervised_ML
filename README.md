@@ -15,14 +15,12 @@
 3. Performed hyperparameter tuning of six supervised ML classifiers: KNN, Decision Tree, Random Forest, XGBoost, Logistic Regression and MLP. Identified that Logistic Regression and MLP far outperform other models. 
 4. From the Logistic Regression classifier, model coefficients and SHAPLY values were acquired to obtain the most important genes/features for classifying each cell type
 
-  
-  
-  
    ![alt text](https://github.com/MSlobody/Cell_Classification_Supervised_ML/blob/main/Data/project_overview.PNG)
    
 ## Resources
 Python Version: 3.9.7\
-Packages: numpy, pandas, scipy, seaborn, matplotlib, urllib3, wordcloud, Pillow. See requirements.txt.\
-Best Buy API: https://developer.bestbuy.com/  \
-API Documentation: https://bestbuyapis.github.io/api-documentation/?shell#getting-started  \
-Word Cloud Adapted From:  https://github.com/amueller/word_cloud  
+Packages: imbalanced_learn, imblearn, matplotlib, mygene, numpy, pandas, scikit_learn, scipy, seaborn, shap, xgboost. See requirements.txt.\
+68k PBMC Source Data: https://github.com/10XGenomics/single-cell-3prime-paper/tree/master/pbmc68k_analysis  \
+Associated Publication: https://www.nature.com/articles/ncomms14049 
+
+## Background
