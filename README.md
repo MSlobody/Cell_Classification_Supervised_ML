@@ -20,7 +20,7 @@
 ## Resources
 Python Version: 3.9.7\
 Packages: imbalanced_learn, imblearn, matplotlib, mygene, numpy, pandas, scikit_learn, scipy, seaborn, shap, xgboost. See requirements.txt.\
-68k PBMC Source Data: https://github.com/10XGenomics/single-cell-3prime-paper/tree/master/pbmc68k_analysis  \
-Associated Publication: https://www.nature.com/articles/ncomms14049 
+Source Data: https://github.com/10XGenomics/single-cell-3prime-paper/tree/master/pbmc68k_analysis  \
+Source Data Publication: https://www.nature.com/articles/ncomms14049 
 
 ## Background
