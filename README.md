@@ -53,22 +53,22 @@ Next, I evaluated the f1, precision, recall, accuracy and AUROC of all 6 optimiz
 
 ![alt text](https://github.com/MSlobody/Cell_Classification_Supervised_ML/blob/main/Data/Performance_six_models.png)
 
-- Overall, we see a trend from the worst performing to best performing classifiers in the order: KNN, Decision Tree, Random Forest, XGB, Logistic Regression and Multilayer Perceptron (MLP). 
+- Overall, we see a trend from the worst performing to best performing classifiers in the order: KNN, Decision Tree, Random Forest, XGB, Logistic Regression and Multilayer Perceptron (MLP)
 - Because of the sparse expression of genes and high dimensional gene/feature space KNN algorithms generally do not perform very well. As seen in the tSNE visualization there is also a lot of overlap between cell type clusters, which may be another explanation for the poor KNN performance (Figure 1D) 
-- The Random Forest, an ensemble of decision trees, outperforms a single decision tree classifier.  
-- Interestingly, by sequentially boosting the weight of misclassified cells, the ensemble XGB classifier outperforms a Random Forest classifier (which employs a bagging strategy and runs each decision tree independently). 
-- Lastly, both the Logistic Regression and MLP classifiers rely on gradient based optimization methods to converge on a class. Given the almost identical performance between the two classifiers I used Logistic Regression for subsequent feature selection. 
+- The Random Forest, an ensemble of decision trees, outperforms a single decision tree classifier
+- Interestingly, by sequentially boosting the weight of misclassified cells, the ensemble XGB classifier outperforms a Random Forest classifier (which employs a bagging strategy and runs each decision tree independently)
+- Lastly, both the Logistic Regression and MLP classifiers rely on gradient based optimization methods to converge on a class. Given the almost identical performance between the two classifiers I used Logistic Regression for subsequent feature selection
 
 
 ### Finding the most important genes/features for classifying each cell type
 
-Shapley values provide a model agonistic approach to obtain the importance of each feature for cell classification. I explored the top 20 gene feature that have the most dramatic average impact on the model output. 
+Shapley values provide a model agnostic approach to obtain the importance of each feature for cell classification. I explored the top 20 gene feature that have the most dramatic average impact on the model output. 
 
 ![alt text](https://github.com/MSlobody/Cell_Classification_Supervised_ML/blob/main/Data/overall_SHAPLY_Features.png)
 
 Some cluster-specific genes used for cell classification in the original publication are seen here such as CD8A/CD8B indicative of CD8+/CD45RA+ Naïve Cytotoxic cells and CD8+ Cytotoxic cells, GNLY indicative of CD56+ NK cells, and lastly CD4 reflecting the 3 different CD4 cell types (Figure 1C). 
 
-A benefit of using a logistic regression classifier is the high model interpretability. Accordingly, I examined the top 10 features with the highest and lowest coefficients for each cell type and compared these genes to the top 10 genes derived using SHAPLY values. 
+A benefit of using a Logistic Regression classifier is the high model interpretability. Accordingly, I examined the top 10 features with the highest and lowest coefficients for each cell type and compared these genes to the top 10 genes derived using SHAPLY values. 
 
 ![alt text](https://github.com/MSlobody/Cell_Classification_Supervised_ML/blob/main/Data/SHAPLY_values_vs_Coefficients_example.PNG)
 
