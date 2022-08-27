@@ -33,7 +33,7 @@ This unsupervised approach may not be powerful enough to distinguish cell types,
 
 ## Findings
 
-#### Mitigating class imbalance
+### Mitigating class imbalance
 My first goal was to balance the different cell types to ensure the model isn’t biased against the more dominant classes such as CD8+/CD45RA+ Naive Cytotoxic cells, which are approximately 100-fold more abundant than the CD34+ cell type (Figure 1A). To do this I evaluated the performance of a Logistic Regression and Random Forest classifier on the baseline unbalanced dataset, weight balanced dataset and lastly a Synthetic Minority Oversampling Technique (SMOTE) balanced dataset. Random Forest is an ensemble-based method that can work with nonlinear data, unlike a simple Logistic Regression classifier, which assumes the data is linearly separable. By setting the weights for each cell type to be equal the model is not biased for the most overrepresented cells. Another strategy to avoid a biased classifier is to create synthetic data points of the underrepresented cell types using SMOTE. 
 
 ![alt text](https://github.com/MSlobody/Cell_Classification_Supervised_ML/blob/main/Data/Cell_Imbalance_figure.PNG)
@@ -41,7 +41,7 @@ My first goal was to balance the different cell types to ensure the model isn’
 For all performance metrics, except precision, the Logistic Regression classifier far outperforms the Random Forest. Ensemble models generally perform better than individual classifiers, however these results indicate that the data is likely linearly separable and thus linear models are just as power as non-linear ones in distinguishing cell types. The baseline unbalanced dataset performs better in accuracy, F1 and precision for the Logistic Regression classifier. Because I am interested in keeping false negatives low and classifying all cell types well. I will use the SMOTE dataset for subsequent model selection and hyperparameter tuning.
 
 
-#### Selecting the best classifier
+### Selecting the best classifier
 
 Next, I tested how a variety of different classifiers would perform, given the surprisingly good performance of the Logistic Regression model. Using RandomizedSearchCV with 100 iterations and 3-fold cross validation I optimized the hyperparameters for each model. Next, I plotted the testing data confusion matrices for each optimized classifier. 
 
@@ -60,7 +60,7 @@ Next, I evaluated the f1, precision, recall, accuracy and AUROC of all 6 optimiz
 - Lastly, both the Logistic Regression and MLP classifiers rely on gradient based optimization methods to converge on a class. Given the almost identical performance between the two classifiers I used Logistic Regression for subsequent feature selection. 
 
 
-#### Finding the most important genes/features for classifying each cell type
+### Finding the most important genes/features for classifying each cell type
 
 Shapley values provide a model agonistic approach to obtain the importance of each feature for cell classification. I explored the top 20 gene feature that have the most dramatic average impact on the model output. 
 
