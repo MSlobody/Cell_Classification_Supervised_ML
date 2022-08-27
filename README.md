@@ -5,7 +5,6 @@
 * [Resources](#Resources)
 * [Background](#Background)
 * [Findings](#Findings)
-* [Future Work](#Future-Work)
 
 ## Project Overview
 
