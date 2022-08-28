@@ -63,7 +63,6 @@ Next, I evaluated the f1, precision, recall, accuracy and AUROC of all 6 optimiz
 
 Shapley values provide a model agnostic approach to obtain the importance of each feature for cell classification. I explored the top 20 gene feature that have the most dramatic average impact on the model output. 
 
-![alt text](https://github.com/MSlobody/Cell_Classification_Supervised_ML/blob/main/Data/overall_SHAPLY_Features.png)
 ![alt text](https://github.com/MSlobody/Cell_Classification_Supervised_ML/blob/main/Data/SHAPLY_values_top20_genes.PNG)
 
 Some cluster-specific genes used for cell classification in the original publication are seen here such as CD8A/CD8B indicative of CD8+/CD45RA+ Naïve Cytotoxic cells and CD8+ Cytotoxic cells, GNLY indicative of CD56+ NK cells, and lastly CD4 reflecting the 3 different CD4 cell types (Figure 1C). 
